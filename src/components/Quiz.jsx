@@ -4,6 +4,7 @@ import QuizItemComponent from "./QuizItemComponent";
 import quizComplete from '../assets/quiz-complete.png';
 import ProgressBar from "./ProgressBar";
 
+const TIMER = 10000;
 export default function Quiz() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [userAnswers, setUserAnswers] = useState([]);
@@ -53,7 +54,7 @@ export default function Quiz() {
           question={questions[currentIndex].text}
           options={questions[currentIndex].answers}
           onAnswerClick={onAnswerClick}/>
-        <ProgressBar timer={3000} finishTimer={finishTimer}/>
+        <ProgressBar timer={TIMER} finishTimer={finishTimer}/>
       </div>
     }
     </div>
